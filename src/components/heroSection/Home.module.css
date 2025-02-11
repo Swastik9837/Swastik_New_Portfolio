@@ -1,0 +1,114 @@
+.heroSection {
+  background: url(../../../public/images/blurry-shape-2.svg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: -10vh;
+  position: relative;
+}
+
+.overlay {
+  min-height: 100vh;
+  background-color: #00000014;
+}
+
+.heroImg {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  background: url(/public/images/Portfolio2.png) center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 400px 400px 400px 400px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #f26602;
+    border-radius: 815px;
+    bottom: 7px;
+    left: 42px;
+    width: 85%;
+    height: 65%;
+    z-index: -1;
+  }
+}
+
+.heroSectionDetailsContainer {
+  color: white;
+}
+
+/* Scroll ZoomIn animation */
+
+.scrollZoomInAnimation {
+  animation: scrollZoomInAnimation linear forwards;
+  animation-timeline: view();
+  /* animation-range-start: 60vh;
+    animation-range-end: 100vh; */
+}
+
+@keyframes scrollZoomInAnimation {
+  100% {
+    /* background-size: 150%; */
+  }
+}
+
+.hello {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.myName {
+  font-size: 2.5rem;
+  /* color: #f26602; */
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.role {
+  font-size: 1.5rem;
+  color: #f26602;
+  font-weight: 600;
+}
+
+.SkilledAtContainer {
+  font-size: 2rem;
+}
+
+.typedText {
+  font-weight: 900;
+  color: #f26602;
+  display: inline-block;
+  min-width: 160px;
+  text-align: start;
+}
+
+@media (max-width: 500px) {
+  .hello {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .myName {
+    font-size: 2.7rem;
+  }
+  .SkilledAtContainer {
+    font-size: 1.7rem;
+  }
+  .typedText {
+    min-width: 143px;
+  }
+}
+
+@media (max-width: 590px) {
+  .heroImg {
+    width: 280px;
+
+    &::before {
+      bottom: 101px;
+      left: 15px;
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
